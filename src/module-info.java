@@ -1,0 +1,3 @@
+module PruebaCase {
+	requires junit;
+}
