@@ -28,8 +28,8 @@ public class EmployeeTest {
 	}
 	@Test //Test calcular bonus anual de trabajador con con currency USD
 	public void TestYearBonusUSAndWorker() {
-		Employee supervisor = new Employee(400,"USD",0.50f ,EmployeeType.Supervisor);
-		assertEquals(386.0, supervisor.CalculateYearBonus());
+		Employee worker= new Employee(400,"USD",0.50f ,EmployeeType.Worker);
+		assertEquals(386.0, worker.CalculateYearBonus());
 	}
 	@Test //Test calcular bonus anual de Manager con currency USD
 	public void TestYearBonusUSAndManager() {
