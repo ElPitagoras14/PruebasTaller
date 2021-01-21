@@ -12,7 +12,7 @@ public class EmployeeTest {
 	@Test //Test de calcular el salario de Worker con currency USD
 	public void testCsWithUSDAndWorker() {
 		Employee worker = new Employee(400,"USD",0.50f ,EmployeeType.Worker);
-		assertEquals(416.08, workr.cs());
+		assertEquals(416.08, worker.cs());
 	}
 	
 	@Test //Test de calcular el salario de Manager con currency USD
