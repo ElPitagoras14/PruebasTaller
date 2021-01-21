@@ -26,5 +26,19 @@ public class EmployeeTest {
 		Employee supervisor = new Employee(400,"USD",0.50f ,EmployeeType.Supervisor);
 		assertEquals(467.08, supervisor.cs());
 	}
-
+	@Test //Test calcular bonus anual de trabajador con con currency USD
+	public void TestYearBonusUSAndWorker() {
+		Employee supervisor = new Employee(400,"USD",0.50f ,EmployeeType.Supervisor);
+		assertEquals(386.0, supervisor.CalculateYearBonus());
+	}
+	@Test //Test calcular bonus anual de Manager con currency USD
+	public void TestYearBonusUSAndManager() {
+		Employee manager = new Employee(400,"USD",0.50f,EmployeeType.Manager);
+		assertEquals(593.0, manager.CalculateYearBonus());
+	}
+	@Test  //Test calcular bonus anual de Supervisor con currency USD
+	public void TestYearBonusUSAndSupervisor() {
+		Employee supervisor = new Employee(400,"USD",0.50f ,EmployeeType.Supervisor);
+		assertEquals(786.0, supervisor.CalculateYearBonus());
+	}
 }
