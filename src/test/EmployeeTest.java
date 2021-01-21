@@ -15,10 +15,22 @@ public class EmployeeTest {
 		assertEquals(416.08, worker.cs());
 	}
 	
+	@Test //Test de calcular el salario de Worker sin currency USD
+	public void testCsWithOutUSDAndWorker() {
+		Employee worker = new Employee(400,"GBP",0.50f ,EmployeeType.Worker);
+		assertEquals(444.33, worker.cs());
+	}
+	
 	@Test //Test de calcular el salario de Manager con currency USD
 	public void testCsWithUSDAndManager() {
 		Employee manager = new Employee(400,"USD",0.50f,EmployeeType.Manager);
 		assertEquals(466.87, manager.cs());
+	}
+	
+	@Test //Test de calcular el salario de Manager sin currency USD
+	public void testCsWithOutUSDAndManager() {
+		Employee manager = new Employee(400,"GBP",0.50f,EmployeeType.Manager);
+		assertEquals(444.68, manager.cs());
 	}
 	
 	@Test //Test de calcular el salario de Supervisor con currency USD
@@ -26,6 +38,13 @@ public class EmployeeTest {
 		Employee supervisor = new Employee(400,"USD",0.50f ,EmployeeType.Supervisor);
 		assertEquals(467.08, supervisor.cs());
 	}
+	
+	@Test //Test de calcular el salario de Supervisor sin currency USD
+	public void testCsWithOutUSDAndSupervisor() {
+		Employee supervisor = new Employee(400,"GBP",0.50f ,EmployeeType.Supervisor);
+		assertEquals(444.50, supervisor.cs());
+	}
+	
 	@Test //Test calcular bonus anual de trabajador con con currency USD
 	public void TestYearBonusUSAndWorker() {
 		Employee worker= new Employee(400,"USD",0.50f ,EmployeeType.Worker);
