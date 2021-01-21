@@ -60,4 +60,26 @@ public class EmployeeTest {
 		Employee supervisor = new Employee(400,"USD",0.50f ,EmployeeType.Supervisor);
 		assertEquals(786.0, supervisor.CalculateYearBonus());
 	}
+	
+	@Test //Test calcular bonus anual de Worker con currency GBP
+	public void testCalculateYearBonusWokerEUR() {
+		Employee e = new Employee(400f, "EUR", 0.50f, EmployeeType.Worker);
+		float bonus = e.CalculateYearBonus();
+		assertEquals(386.0f, bonus);
+	}
+	
+	@Test //Test calcular bonus anual de Supervisor con currency GBP
+	public void testCalculateYearBonusSupervisorEUR() {
+		Employee e = new Employee(400f, "EUR", 0.50f, EmployeeType.Supervisor);
+		float bonus = e.CalculateYearBonus();
+		assertEquals(573f, bonus);
+	}
+	
+	// Test con: Manager y EUR
+	@Test //Test calcular bonus anual de Manager con currency GBP
+	public void testCalculateYearBonusManagerEUR() {
+		Employee e = new Employee(400f, "EUR", 0.50f, EmployeeType.Manager);
+		float bonus = e.CalculateYearBonus();
+		assertEquals(766f, bonus);
+	}
 }
